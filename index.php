@@ -63,8 +63,27 @@
                 <li><span>시원한</span>국수</li>
             </ul>
         </div>
-        <form action="go.php">
-            <input type="text" placeholder="인사말">
+        <form action="go.php" method="post">
+            <h2>가입하기</h2>
+            <ul>
+                <li><input type="text" name="uname", id="uname"></li>
+            
+                <li><label for="">광고 메시지 받기</label>
+                    <input type="checkbox" name="sendm" id="checkbox" value="1"></li>
+                <li>
+                    <label for="">강의 수료 여부</label>
+                    <input type="checkbox" name="study" id="study" value="1"></li>
+                </li>
+                <li>
+                    <label for="">남성</label>
+                    <input type="radio" name="gender" value="M" checked>
+                    <label for="">여성</label>
+                    <input type="radio" name="gender" value="F">
+                </li>
+                <li><input type="text" name="hello" placeholder="인사말을 적으세요">
+</li>
+            </ul>
+            <br>
             <input type="submit" value="전송하기">
         </form>
     </body>
