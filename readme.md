@@ -7,26 +7,27 @@
     * <시작태그/>
         - 태그의 종류
     * 태그
-        - HTML
-            - HEAD
-                - meta
-                - title
-                - style
-                - script
+        - <HTML>
+            - <HEAD>
+                - <meta
+                - <title
+                - <style
+                - <script
             - BODY
-                - h1 ~ h6 제목
-                - div 블럭
-                - p 문단
-                - span 구간
-                - ul~li
-                - ol~li
+                - <h1 ~ h6 제목
+                - <div 블럭
+                - <p 문단
+                - <ul~li
+                - <ol~li
+                - <span 인라인
+                - <label 인라인
                 - 폼관련 태그
-                    - form
-                    - input
-                    - checkbox
-                    - select
-                    - radio
+                    - <form
+                    - <input 인라인
+                    - <checkbox 인라인
+                    - <select 인라인
+                    - <radio 인라인
             - 기타태그
-                - address
-                - article
-                - section
+                - <address
+                - <article
+                - < section
