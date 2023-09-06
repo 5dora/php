@@ -81,25 +81,25 @@
         </div>
 </div>
 
-<div>   
-    <hr>
-    <h1>for문 실습</h1>
-    <hr>
+    <div>   
+        <hr>
+        <h1>for문 실습</h1>
+        <hr>
         <!-- php는 pre script 언어, html보다 우선해서 작동 -->
         <?php
-        //단열 주석
-        /* 다열 주석 */
-        // 변수 $변수명 (스크립트 변수)
-        // .문자열 합치기
-        $a = 'h3';
-        print('<'.$a.'>안녕하세요</'.$a.'>');
-        print("<h1>안녕하세요</h1>");
-        // 변수 형이 없다
-        // 반복문 for(증감변수초기화;증감변수조건;증감){코드블럭} while
-        for($i=0; $i<6;$i++){
-            $a = 'h'.$i;
-            print('<'.$a.'>'.$i.'안녕하세요</'.$a.'>');
-        }
+            //단열 주석
+            /* 다열 주석 */
+            // 변수 $변수명 (스크립트 변수)
+            // .문자열 합치기
+            $a = 'h3';
+            print('<'.$a.'>안녕하세요</'.$a.'>');
+            print("<h1>안녕하세요</h1>");
+            // 변수 형이 없다
+            // 반복문 for(증감변수초기화;증감변수조건;증감){코드블럭} while
+            for($i=0; $i<6;$i++){
+                $a = 'h'.$i;
+                print('<'.$a.'>'.$i.'안녕하세요</'.$a.'>');
+            }
         ?>
 
         <div class="row-for1">
@@ -234,79 +234,78 @@
             print('</div>');
             }
         ?>
-    
-</div>
+    </div>
 
-<div>
-    <?php
-    // def 함수명():
-        //선언 function 함수명( 매개변수){코드블럭;return 변수명}
-        function makeHr($title="개별처리"){
-            print('<hr>');
-            print('<h1>'.$title.'</h1>');
-            print('<hr>');
-        }
-    ?>
-</div>
-
-<div>
+    <div>
         <?php
-        makeHr("스위치문");
-        $score=75;
-        $score=10*floor($score/10);
-        print($score);
-        switch($score){
-            case 90:
-                print('수');
-                break;
-            case 80:
-                print('우');
-                break;
-            case 70:
-                print('미');
-                break;
-            default:
-                print('낙제');
-        }
+        // def 함수명():
+            //선언 function 함수명( 매개변수){코드블럭;return 변수명}
+            function makeHr($title="개별처리"){
+                print('<hr>');
+                print('<h1>'.$title.'</h1>');
+                print('<hr>');
+            }
         ?>
-</div>
+    </div>
 
-    <?php
-        makeHr('계단 만들기');
-        $kn=1;
-        function grid1($cNo=1,$addClass='redbox'){
-            $other=12-$cNo;
-            $s='<div class="row">';
-            $s.='<div class="col-lg-'.$cNo.' "><h1>.col-md-'.$cNo.'</h1></div>'."\n";
-            $s.='<div class="col-lg-'.$other.' '.$addClass.'"><h1>.col-md-'.$other.'</h1></div>'."\n";
-            $s.='</div>';
-            print($s);
-        }
-        for ($i=11;$i>0;$i--){
-            grid1($i);
-        }
-    ?> 
+    <div>
+        <?php
+            makeHr("스위치문");
+            $score=75;
+            $score=10*floor($score/10);
+            print($score);
+            switch($score){
+                case 90:
+                    print('수');
+                    break;
+                case 80:
+                    print('우');
+                    break;
+                case 70:
+                    print('미');
+                    break;
+                default:
+                    print('낙제');
+            }
+        ?>
+    </div>
 
-<?php
-    /* 배열 */
-    makeHr("단순배열");
-    $arr = array(1, 2, '국어', '수학');
-    for($i=0; $i<count($arr); $i++){
-        print('<li>인덱스('.$i.'):'.$arr[$i].'</li>');
-    }
-    foreach($arr as $a){
-        print('<li>'.$a.'</li>');
-    }
+        <?php
+            makeHr('계단 만들기');
+            $kn=1;
+            function grid1($cNo=1,$addClass='redbox'){
+                $other=12-$cNo;
+                $s='<div class="row">';
+                $s.='<div class="col-lg-'.$cNo.' "><h1>.col-md-'.$cNo.'</h1></div>'."\n";
+                $s.='<div class="col-lg-'.$other.' '.$addClass.'"><h1>.col-md-'.$other.'</h1></div>'."\n";
+                $s.='</div>';
+                print($s);
+            }
+            for ($i=11;$i>0;$i--){
+                grid1($i);
+            }
+        ?> 
 
-    /*연관배열 key-value*/
-    makeHr("연관배열");
-    $arr = array(1=>'국어', 2=>'수학', 5=>'영어', 6=>'수학');
-    for($i=0; $i<count($arr); $i++){
-        print('<li>인덱스('.$i.'):'.$arr[$i].'</li>');
-    }
-    foreach($arr as $k=>$v){
-        print('<li>'.$k.':'.$v.'</li>');
-    }
-?>
+        <?php
+            /* 배열 */
+            makeHr("단순배열");
+            $arr = array(1, 2, '국어', '수학');
+            for($i=0; $i<count($arr); $i++){
+                print('<li>인덱스('.$i.'):'.$arr[$i].'</li>');
+            }
+            foreach($arr as $a){
+                print('<li>'.$a.'</li>');
+            }
+
+            /*연관배열 key-value*/
+            makeHr("연관배열");
+            $arr = array(1=>'국어', 2=>'수학', 5=>'영어', 6=>'수학');
+            for($i=0; $i<count($arr); $i++){
+                print('<li>인덱스('.$i.'):'.$arr[$i].'</li>');
+            }
+            foreach($arr as $k=>$v){
+                print('<li>'.$k.':'.$v.'</li>');
+            }
+        ?>
     </body>
 </html>
