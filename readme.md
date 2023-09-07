@@ -34,8 +34,9 @@
 * img 로드 안될 때
     - ctrl + shift + r: 전체 데이터 다시 가져오기
 
+---
 
-* DATABASE -mysql
+# DATABASE -mysql
 
 - 데이터베이스 생성
 ```SQL
