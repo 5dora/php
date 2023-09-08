@@ -22,8 +22,11 @@ function getData($qry='select * from users',$type=1){
     $res=mysqli_query($conn,$qry);
     $resArr=array();// 데이터 초기화
     if($type==1){// select 라면
+        // data가 빌 때까지 fetch를 돌려야 해
         // 묵시적 불린 T/F 0==F 0> T
         while($data=mysqli_fetch_assoc($res)){// 조건이 참인동안 반복
+            //php 함수 지향
+            // array_push -python의 append같은
             array_push($resArr,$data);
         }// 연관배열로
     }else{
@@ -31,23 +34,4 @@ function getData($qry='select * from users',$type=1){
     }
     return $resArr;
 }
-
-// function getData($qry='select * from users', $type=1){
-//     $conn=getConn();
-//     $res = mysqli_query($conn, $qry);
-//     $resArr=array();// 데이터 초기화
-//     if($type==1){ // select라면
-//         // data가 빌 때까지 fetch를 돌려야 해
-//         // 묵시적 불린 0==F, 0>T
-//         while ($data=mysqli_fetch_assoc($res)){
-//             //php 함수 지향
-//             // array_push -python의 append같은
-//             array_push($resArr,$data);
-//         }
-//     }
-//     else{
-//         $resArr = $res;
-//     }
-//     return $resArr;
-// }
 ?>

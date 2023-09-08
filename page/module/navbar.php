@@ -10,7 +10,7 @@
       </button>
       <a class="navbar-brand" href="/">
       <!-- 로고 이미지 넣기 -->
-        <img src="/assets/logo.png" alt="logo" height=40px>
+        <img class="contain" src="/assets/logo.png" alt="logo" height=40px>
       </a>
     </div>
 
