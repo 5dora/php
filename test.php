@@ -13,7 +13,7 @@
             $("#btn3").click(function(){
                 // form 값을 serialize
                 let fdata=$("#form").serialize();
-                console.log(fdata);
+                console.log('폼시리얼라이즈:', fdata);
                 // ajax로 데이터 전송
                 $.ajax({
                     url:'getCoupon.php',
@@ -21,7 +21,7 @@
                     type:'POST',
                     dataType:'html',
                     success:function(result){// 성공했을때
-                        console.log(result)
+                        console.log('돌아온 결과: ', result)
                         $("#tbl tbody").append(result);
 
                     },
@@ -50,6 +50,12 @@
                 </li>
                 <li><label>유효기간</label>
                     <input name="till" id="till"  value="2023-01-01">
+                    <?
+                    //단방향 암호화 기술 md5
+                    $data = date("YYYYMMDDHHiiss");
+                    $hashcode=md5('아시아경제'.$data);
+                    ?>
+                    <input type='test' name="hash" id="hash"  value="<?=$hashcode?>">
                 </li>
             </ul>
         </form>
